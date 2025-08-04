@@ -4,6 +4,17 @@
   padding: 8rem;
   height: 100%;
 }
+.newChatMessage {
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  right: 100px;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 2.2rem;
+  color: #fff; /* Adjust color as needed */
+}
 /* Custom scrollbar ONLY for .chats container */
 .chats::-webkit-scrollbar {
   width: 8px;
