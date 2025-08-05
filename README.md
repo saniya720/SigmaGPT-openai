@@ -1,5 +1,9 @@
 🧠 SigmaGPT – Your Personal AI Chat Assistant
 
+🔗 link:-
+https://sigma-gpt-openai.vercel.app
+
+
 SigmaGPT is a full-stack AI chat assistant application built with the power of OpenAI's GPT models. It allows users to interact with a smart conversational agent, view chat history, and enjoy a clean, intuitive UI—just like ChatGPT, but self-hosted.
 
 > 🚀 Live Demo: [Your Render/Deployed Link Here]
