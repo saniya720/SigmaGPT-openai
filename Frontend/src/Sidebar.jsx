@@ -16,8 +16,9 @@ function Sidebar() {
   } = useContext(MyContext);
 
   const getAllThreads = async () => {
+    const backendUrl = "https://sigmagpt-openai.onrender.com";
     try {
-      const response = await fetch("http://localhost:8080/api/thread");
+      const response = await fetch(`${backendUrl}/api/thread`);
       const res = await response.json();
       const filteredData = res.map((thread) => ({
         threadId: thread.threadId,
@@ -46,9 +47,7 @@ function Sidebar() {
     setCurrThreadId(newThreadId);
 
     try {
-      const response = await fetch(
-        `http://localhost:8080/api/thread/${newThreadId}`
-      );
+      const response = await fetch(`${backendUrl}/api/thread/${newThreadId}`);
 
       if (!response.ok) {
         const text = await response.text(); // log the error text
@@ -67,10 +66,9 @@ function Sidebar() {
 
   const deleteThread = async (threadId) => {
     try {
-      const response = await fetch(
-        `http://localhost:8080/api/thread/${threadId}`,
-        { method: "DELETE" }
-      );
+      const response = await fetch(`${backendUrl}/api/thread/${threadId}`, {
+        method: "DELETE",
+      });
       const res = await response.json();
       console.log(res);
 

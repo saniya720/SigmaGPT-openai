@@ -32,12 +32,10 @@ function ChatWindow() {
         threadId: currThreadId,
       }),
     };
+    const backendUrl = "https://sigmagpt-openai.onrender.com";
 
     try {
-      const response = await fetch(
-        "https://sigmagpt-openai.onrender.com/api/chat",
-        options
-      );
+      const response = await fetch(`${backendUrl}/api/chat`, options);
       const res = await response.json();
       console.log(res);
       setReply(res.reply);

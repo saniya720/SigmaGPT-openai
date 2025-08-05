@@ -5,16 +5,16 @@
   height: 100%;
 }
 .newChatMessage {
-  text-align: center;
   position: absolute;
   top: 45%;
-  left: 50%;
-  right: 100px;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  left: 280px; /* Same width as your sidebar */
+  transform: translateY(-50%);
   font-size: 2.2rem;
-  color: #fff; /* Adjust color as needed */
+  color: #fff;
+  width: calc(100% - 280px); /* Prevent text overflow */
+  text-align: center; /* Optional: remove if not needed */
 }
+
 /* Custom scrollbar ONLY for .chats container */
 .chats::-webkit-scrollbar {
   width: 8px;
