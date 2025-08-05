@@ -15,8 +15,9 @@ function Sidebar() {
     setPrevChats,
   } = useContext(MyContext);
 
+  const backendUrl = "https://sigmagpt-openai.onrender.com";
+
   const getAllThreads = async () => {
-    const backendUrl = "https://sigmagpt-openai.onrender.com";
     try {
       const response = await fetch(`${backendUrl}/api/thread`);
       const res = await response.json();
